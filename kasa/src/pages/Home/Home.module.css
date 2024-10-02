@@ -1,0 +1,9 @@
+.div {
+  width: 100%;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 30%;
+}
