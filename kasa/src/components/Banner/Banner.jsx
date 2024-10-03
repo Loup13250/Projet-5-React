@@ -6,7 +6,7 @@ function Banner({ children }) {
     <section className={styles.banner}>
       <img
         className={styles.img}
-        src={bannerHome} // Remplacez par le chemin de votre image
+        src={bannerHome}
         alt="Bannière - Paysage"
         title="Bannière - Paysage"
       />
