@@ -5,24 +5,40 @@
   font-weight: 500;
   padding: 40px 60px 40px 60px;
 }
-.a:hover {
-  text-decoration: underline;
+
+.img {
+  width: 50%;
+  max-width: 211px;
 }
 
 /* Nav */
 .ul {
   display: flex;
+  padding-left: 0;
   justify-content: space-between;
-  list-style-type: none; /* rond */
-  padding: 0;
 }
 
 .li {
-  font-size: 20px;
-  margin-left: 30px;
+  margin-left: 45px;
+  font-size: 1.1em;
 }
 
-.img {
-  width: 50%;
-  max-width: 211px;
+.a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 15px;
+  }
+
+  .li {
+    margin-left: 17px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+  }
+
+  .img {
+    max-width: 145px;
+  }
 }

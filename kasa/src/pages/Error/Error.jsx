@@ -1,4 +1,5 @@
 import styles from "./Error.module.css";
+import { Link } from "react-router-dom";
 
 function Error() {
   return (
@@ -7,7 +8,11 @@ function Error() {
       <div className={styles.text}>
         Oups ! La page que vous demandez n'existe pas.
       </div>
+      <Link className={styles.link} to="/">
+        Retourner sur la page d'accueil
+      </Link>
     </main>
   );
 }
+
 export default Error;
