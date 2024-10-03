@@ -19,12 +19,17 @@
 }
 
 .li {
-  margin-left: 45px;
+  margin-left: 40px;
   font-size: 1.1em;
 }
 
 .a:hover {
   text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 @media (max-width: 576px) {

@@ -11,7 +11,7 @@ function Footer() {
         title="Logo de Kasa"
       />
       <div className={styles.div}>
-        <i className="fa-regular fa-copyright fa-xs"></i> 2020 Kasa. All rights
+        <i className="fa-regular fa-copyright fa-xs"></i> 2024 Kasa. All rights
         reserved
       </div>
     </footer>
