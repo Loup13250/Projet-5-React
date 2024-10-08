@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner/Banner";
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 import Gallery from "../../components/Gallery/Gallery";
 
 function Home() {

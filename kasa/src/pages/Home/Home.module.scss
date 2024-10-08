@@ -1,0 +1,34 @@
+$color: white;
+$font-size-desktop: 48px;
+$font-size-mobile: 24px;
+$font-weight: bold;
+$width: 100%;
+$text-align-desktop: center;
+$bottom: 35%;
+$line-height-desktop: 142.6%;
+$top: 10%;
+$text-align-mobile: left;
+$margin-left: 20px;
+$line-height-mobile: 100%;
+$padding-right: 20px;
+
+.div {
+  color: $color;
+  font-size: $font-size-desktop;
+  font-weight: $font-weight;
+  width: $width;
+  text-align: $text-align-desktop;
+  position: absolute;
+  bottom: $bottom;
+  line-height: $line-height-desktop;
+
+  @media (max-width: 576px) {
+    font-size: $font-size-mobile;
+    top: $top;
+    text-align: $text-align-mobile;
+    margin-left: $margin-left;
+    line-height: $line-height-mobile;
+    width: $width;
+    padding-right: $padding-right;
+  }
+}

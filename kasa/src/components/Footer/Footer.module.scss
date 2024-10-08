@@ -1,0 +1,18 @@
+$background-color: black;
+$color: white;
+$padding-img: 40px 0 30px 0;
+$padding-div: 20px;
+
+.footer {
+  background-color: $background-color;
+  color: $color;
+  text-align: center;
+}
+
+.img {
+  padding: $padding-img;
+}
+
+.div {
+  padding-bottom: $padding-div;
+}

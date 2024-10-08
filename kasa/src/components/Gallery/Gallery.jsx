@@ -1,4 +1,4 @@
-import styles from "./Gallery.module.css";
+import styles from "./Gallery.module.scss";
 import Card from "../Card/Card";
 import datas from "../../datas/dataP.json";
 

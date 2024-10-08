@@ -1,0 +1,39 @@
+$color-error: #ff6060;
+$font-size-error-desktop: 288px;
+$font-size-error-mobile: 96px;
+$font-size-text-desktop: 36px;
+$font-size-text-mobile: 18px;
+$margin-error-desktop: 138px;
+$margin-text-desktop: 138px;
+
+.main {
+  text-align: center;
+}
+
+.error {
+  color: $color-error;
+  font-weight: bold;
+  font-size: $font-size-error-desktop;
+  margin-bottom: $margin-error-desktop;
+  margin-top: $margin-error-desktop;
+
+  @media (max-width: 576px) {
+    font-size: $font-size-error-mobile;
+  }
+}
+
+.text {
+  color: $color-error;
+  font-size: $font-size-text-desktop;
+  margin-bottom: $margin-text-desktop;
+
+  @media (max-width: 576px) {
+    font-size: $font-size-text-mobile;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  margin-bottom: $margin-text-desktop;
+}

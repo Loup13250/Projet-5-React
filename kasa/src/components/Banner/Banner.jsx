@@ -1,4 +1,4 @@
-import styles from "./Banner.module.css";
+import styles from "./Banner.module.scss";
 import bannerHome from "../../assets/images/banner-home.webp";
 import bannerAbout from "../../assets/images/banner-about.webp";
 

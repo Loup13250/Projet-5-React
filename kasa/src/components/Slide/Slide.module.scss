@@ -1,0 +1,124 @@
+$width: 100%;
+$margin-bottom-slide: 30px;
+$padding-container: 35px 30px 17px 30px;
+$background-color-container: #f7f7f7;
+$border-radius: 5px;
+$bottom: 5px;
+$height: 100%;
+$background-color-button: #ff6060;
+$height-button: 52px;
+$hover-opacity: 0.7;
+$font-weight: 500;
+$font-size-title: 1.3em;
+$duration-animation: 500ms;
+$padding-button: 30px;
+$padding-button-mobile: 20px;
+$height-button-mobile: 30px;
+$padding-container-mobile: 25px 20px 10px 20px;
+
+.Slide {
+  width: $width;
+  margin-bottom: $margin-bottom-slide;
+  overflow: hidden;
+}
+
+.containerText {
+  padding: $padding-container;
+  background-color: $background-color-container;
+  border-radius: $border-radius;
+  position: relative;
+  bottom: $bottom;
+  height: $height;
+}
+
+.button {
+  width: $width;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: $padding-button;
+  padding-right: $padding-button;
+  border: none;
+  background-color: $background-color-button;
+  color: white;
+  border-radius: $border-radius;
+  height: $height-button;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+
+  &:hover {
+    opacity: $hover-opacity;
+  }
+}
+
+.title {
+  font-weight: $font-weight;
+  font-size: $font-size-title;
+  font-weight: bold;
+}
+
+/* Animations */
+.collapse[animation="1"] > .containerText {
+  animation: open $duration-animation;
+}
+
+.collapse[animation="0"] > .containerText {
+  animation: close $duration-animation ease-in-out;
+}
+
+.icone[animation="1"] {
+  transform: rotate(-180deg);
+  transition: transform $duration-animation;
+}
+
+.icone[animation="0"] {
+  transform: rotate(0deg);
+  transition: transform $duration-animation;
+}
+
+@media (max-width: 576px) {
+  .Slide {
+    margin-bottom: 20px;
+  }
+
+  .button {
+    padding-left: $padding-button-mobile;
+    padding-right: $padding-button-mobile;
+    height: $height-button-mobile;
+  }
+
+  .title {
+    font-size: 1.1em;
+  }
+
+  .containerText {
+    padding: $padding-container-mobile;
+  }
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-70px);
+  }
+  100% {
+    opacity: 1;
+    max-height: 400px;
+    transform: translateY(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    max-height: 400px;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-70px);
+  }
+}

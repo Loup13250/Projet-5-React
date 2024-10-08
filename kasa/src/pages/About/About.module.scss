@@ -1,0 +1,11 @@
+$width: 80%;
+$margin: auto;
+
+.section {
+  width: $width;
+  margin: $margin;
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+}
