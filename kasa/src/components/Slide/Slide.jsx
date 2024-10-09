@@ -1,5 +1,5 @@
 import styles from "./Slide.module.scss";
-import { useState } from "react"; // hooks React
+import { useState } from "react"; // hooks
 
 function Slide({ titleSlide, textSlide }) {
   // titleSlide et textSlide sont des props.
@@ -20,12 +20,7 @@ function Slide({ titleSlide, textSlide }) {
 
   return isOpen ? (
     <div className={styles.Slide} animation={animation}>
-      <button
-        aria-haspopup="true"
-        aria-expanded="true"
-        className={styles.button}
-        onClick={() => close()}
-      >
+      <button className={styles.button} onClick={() => close()}>
         <h3 className={styles.title}>{titleSlide}</h3>
         <i
           className={styles.icone + " fa-solid fa-chevron-down fa-1x"}
@@ -36,12 +31,7 @@ function Slide({ titleSlide, textSlide }) {
     </div>
   ) : (
     <div className={styles.Slide} animation={animation}>
-      <button
-        aria-haspopup="true"
-        aria-expanded="false"
-        className={styles.button}
-        onClick={() => open()}
-      >
+      <button className={styles.button} onClick={() => open()}>
         <h3 className={styles.title}>{titleSlide}</h3>
         <i
           className={styles.icone + " fa-solid fa-chevron-down fa-1x"}
@@ -53,3 +43,27 @@ function Slide({ titleSlide, textSlide }) {
 }
 
 export default Slide;
+
+// Importations : Il importe des styles et des outils de React.
+
+// Création d'un Composant : Il crée un composant appelé Slide qui prend deux paramètres (titleSlide et textSlide).
+
+// État du Composant :
+
+// isOpen : Gère si le slide est ouvert ou fermé.
+
+// animation : Gère l'état d'animation.
+
+// Fonctions d'Ouverture et Fermeture :
+
+// open : Ouvre le slide et déclenche l'animation d'ouverture.
+
+// close : Lance l'animation de fermeture et ferme le slide après 500ms.
+
+// Affichage du Composant :
+
+// Si le slide est ouvert, il montre un bouton et le texte (textSlide).
+
+// Si le slide est fermé, il montre juste un bouton.
+
+// En gros, ce fichier gère une section "slider" qui peut s'ouvrir et se fermer avec des animations

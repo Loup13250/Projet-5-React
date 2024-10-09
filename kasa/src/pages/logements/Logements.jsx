@@ -12,3 +12,22 @@ function Home() {
 }
 
 export default Home;
+
+// import { useParams, useNavigate } from "react-router-dom"
+// import { useEffect } from "react"
+// import styles from "./Logements.module.scss"
+// import Carrousel from ../../components/Carrousel/Carrousel
+// import Slide from "../../components/Slide/Slide"
+// import datas from "../../datas/dataP.json"
+// ---------
+// ---------
+// function recupere id Use params
+// Vérifier les Datas
+// ---------
+// Si Datas =/ error
+// ---------
+// Déclarer const
+//  tags / noms / note ( etoiles)
+// ---------
+// Return
+// DataP

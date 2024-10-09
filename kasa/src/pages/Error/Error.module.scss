@@ -5,6 +5,7 @@ $font-size-text-desktop: 36px;
 $font-size-text-mobile: 18px;
 $margin-error-desktop: 138px;
 $margin-text-desktop: 138px;
+$font-weight: bold;
 
 .main {
   text-align: center;
@@ -12,7 +13,7 @@ $margin-text-desktop: 138px;
 
 .error {
   color: $color-error;
-  font-weight: bold;
+  font-weight: $font-weight;
   font-size: $font-size-error-desktop;
   margin-bottom: $margin-error-desktop;
   margin-top: $margin-error-desktop;
@@ -33,6 +34,7 @@ $margin-text-desktop: 138px;
 }
 
 .link {
+  font-weight: $font-weight;
   text-decoration: underline;
   text-underline-offset: 2px;
   margin-bottom: $margin-text-desktop;

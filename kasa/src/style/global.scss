@@ -25,14 +25,6 @@ body {
   font-weight: $font-weight-body;
 }
 
-/* footer bas quand la page est plus petite que la fenêtre */
-#root {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-}
-
 ul {
   padding: 0;
   margin: 0;
@@ -40,4 +32,22 @@ ul {
 
 li {
   list-style: none; /* ronds a côté des nav */
+}
+
+/* Pour que le Footer reste en bas de la page */
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+@media (max-width: 576px) {
+  main {
+    padding: 15px 15px 40px 15px;
+  }
+
+  #root {
+    min-height: 0vh;
+  }
 }
