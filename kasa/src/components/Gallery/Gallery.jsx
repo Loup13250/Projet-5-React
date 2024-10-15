@@ -1,9 +1,9 @@
 import styles from "./Gallery.module.scss";
 import Card from "../Card/Card";
-import datas from "../../datas/dataP.json";
+import datas from "../../datas/dataLogements.json";
 
 function Gallery() {
-  // vérifie que les datas existent, si oui les affiches sur la page graces aux dataP.json
+  // vérifie que les datas existent, si oui les affiches sur la page graces aux dataLogements.json
   return (
     datas &&
     datas.length > 0 && (

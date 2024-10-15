@@ -16,10 +16,17 @@ $padding-button-mobile: 20px;
 $height-button-mobile: 30px;
 $padding-container-mobile: 25px 20px 10px 20px;
 
-.Slide {
+.slide {
   width: $width;
   margin-bottom: $margin-bottom-slide;
   overflow: hidden;
+  &[data-animation="1"] > .containerText {
+    animation: open $duration-animation;
+  }
+
+  &[data-animation="0"] > .containerText {
+    animation: close $duration-animation ease-in-out;
+  }
 }
 
 .containerText {
@@ -46,7 +53,6 @@ $padding-container-mobile: 25px 20px 10px 20px;
   position: relative;
   z-index: 10;
   cursor: pointer;
-
   &:hover {
     opacity: $hover-opacity;
   }
@@ -58,27 +64,19 @@ $padding-container-mobile: 25px 20px 10px 20px;
   font-weight: bold;
 }
 
-/* Animations */
-.collapse[animation="1"] > .containerText {
-  animation: open $duration-animation;
-}
-
-.collapse[animation="0"] > .containerText {
-  animation: close $duration-animation ease-in-out;
-}
-
-.icone[animation="1"] {
-  transform: rotate(-180deg);
-  transition: transform $duration-animation;
-}
-
-.icone[animation="0"] {
-  transform: rotate(0deg);
-  transition: transform $duration-animation;
+.icone {
+  &[data-animation="1"] {
+    transform: rotate(-180deg);
+    transition: transform $duration-animation;
+  }
+  &[data-animation="0"] {
+    transform: rotate(0deg);
+    transition: transform $duration-animation;
+  }
 }
 
 @media (max-width: 576px) {
-  .Slide {
+  .slide {
     margin-bottom: 20px;
   }
 
@@ -102,11 +100,13 @@ $padding-container-mobile: 25px 20px 10px 20px;
     max-height: 0;
     opacity: 0;
     transform: scaleY(0);
+    transform-origin: top;
   }
   100% {
     max-height: 400px;
     opacity: 1;
     transform: scaleY(1);
+    transform-origin: top;
   }
 }
 
@@ -115,10 +115,12 @@ $padding-container-mobile: 25px 20px 10px 20px;
     max-height: 400px;
     opacity: 1;
     transform: scaleY(1);
+    transform-origin: top;
   }
   100% {
     max-height: 0;
     opacity: 0;
     transform: scaleY(0);
+    transform-origin: top;
   }
 }

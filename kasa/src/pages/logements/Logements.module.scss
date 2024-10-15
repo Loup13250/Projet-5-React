@@ -1,5 +1,152 @@
-$font-weight: 500;
+// Variables
+$font-weight-main: 500;
+$margin-topbot: 30px;
+$gap-details: 50px;
+$main-introduction-width: 65%;
+$gap-main-introduction: 12px;
+$tags-color: white;
+$tags-border-radius: 10px;
+$tags-padding: 5px 20px;
+$tags-margin-right: 10px;
+$tags-margin-bottom: 5px;
+$tags-font-size: 0.8em;
+$host-picture-widthheight: 64px;
+$host-picture-border-radius: 50%;
+$host-picture-margin-left: 10px;
+$star-color-nocolor: #e3e3e3;
+$star-margin-left: 5px;
+$main-color: #ff6060;
+
+// Mobile
+$mobile-margin-top: 15px;
+$mobile-margin-bottom: 20px;
+$mobile-host-picture-width: 32px;
+$mobile-host-picture-height: 32px;
+$mobile-details-gap: 0px;
+$mobile-host-margin-top: 10px;
 
 .main {
-  font-weight: $font-weight;
+  font-weight: $font-weight-main;
+}
+
+/* Section titre lieu tags l'hôte et la note */
+.introduction {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $margin-topbot;
+  margin-bottom: $margin-topbot;
+}
+
+/* Sectiondescription et les équipements */
+.details {
+  display: flex;
+  justify-content: space-between;
+  gap: $gap-details;
+}
+
+/* Div  titre lieu tags */
+.mainIntroduction {
+  width: $main-introduction-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $gap-main-introduction;
+}
+
+.h2 {
+  margin: 0;
+  font-weight: $font-weight-main;
+  font-size: 36px;
+  color: $main-color;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags {
+  background-color: $main-color;
+  color: $tags-color;
+  border-radius: $tags-border-radius;
+  white-space: nowrap;
+  padding: $tags-padding;
+  margin-right: $tags-margin-right;
+  margin-bottom: $tags-margin-bottom;
+  font-size: $tags-font-size;
+}
+
+/* Div photo nom-hote et sa note */
+.hostInformations {
+  color: $main-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Div photo et nom hote */
+.host {
+  display: flex;
+  align-items: center;
+}
+
+.nameHost {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  color: $main-color;
+}
+
+.pictureHost {
+  width: $host-picture-widthheight;
+  height: $host-picture-widthheight;
+  object-fit: cover;
+  object-position: center;
+  border-radius: $host-picture-border-radius;
+  margin-left: $host-picture-margin-left;
+}
+
+/* Div étoiles note */
+.rating {
+  text-align: right;
+}
+
+.starNocolor {
+  color: $star-color-nocolor;
+}
+
+.star {
+  margin-left: $star-margin-left;
+}
+
+@media (max-width: 576px) {
+  .introduction {
+    flex-direction: column;
+    margin-top: $mobile-margin-top;
+    margin-bottom: $mobile-margin-bottom;
+  }
+
+  .h2 {
+    font-size: 18px;
+  }
+
+  .mainIntroduction {
+    width: 100%;
+  }
+
+  .hostInformations {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: $mobile-host-margin-top;
+  }
+
+  .pictureHost {
+    height: $mobile-host-picture-height;
+    width: $mobile-host-picture-width;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: $mobile-details-gap;
+  }
 }

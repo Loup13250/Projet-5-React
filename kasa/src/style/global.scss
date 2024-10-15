@@ -3,6 +3,8 @@ $main-padding-desktop: 0 40px 40px 40px;
 $main-padding-mobile: 15px 15px 40px 15px;
 $font-weight-body: 400;
 
+//
+//
 * {
   font-family: $font-family;
 }
@@ -14,7 +16,7 @@ a {
 
 main {
   padding: $main-padding-desktop;
-
+  flex: 1;
   @media (max-width: 576px) {
     padding: $main-padding-mobile;
   }
@@ -35,11 +37,16 @@ li {
 }
 
 /* Pour que le Footer reste en bas de la page */
-#root {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+:root {
+  body {
+    min-height: 100vh;
+    #root {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
 }
 
 @media (max-width: 576px) {

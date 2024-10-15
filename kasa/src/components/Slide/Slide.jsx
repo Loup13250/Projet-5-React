@@ -19,23 +19,23 @@ function Slide({ titleSlide, textSlide }) {
   }
 
   return isOpen ? (
-    <div className={styles.Slide} animation={animation}>
+    <div className={styles.slide} data-animation={animation}>
       <button className={styles.button} onClick={() => close()}>
         <h3 className={styles.title}>{titleSlide}</h3>
         <i
           className={styles.icone + " fa-solid fa-chevron-down fa-1x"}
-          animation={animation}
+          data-animation={animation}
         ></i>
       </button>
       <div className={styles.containerText}>{textSlide}</div>
     </div>
   ) : (
-    <div className={styles.Slide} animation={animation}>
+    <div className={styles.slide} data-animation={animation}>
       <button className={styles.button} onClick={() => open()}>
         <h3 className={styles.title}>{titleSlide}</h3>
         <i
           className={styles.icone + " fa-solid fa-chevron-down fa-1x"}
-          animation={animation}
+          data-animation={animation}
         ></i>
       </button>
     </div>

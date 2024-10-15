@@ -4,6 +4,7 @@ $font-size-error-mobile: 96px;
 $font-size-text-desktop: 36px;
 $font-size-text-mobile: 18px;
 $margin-error-desktop: 138px;
+$margin-error-mobile: 113px;
 $margin-text-desktop: 138px;
 $font-weight: bold;
 
@@ -20,6 +21,8 @@ $font-weight: bold;
 
   @media (max-width: 576px) {
     font-size: $font-size-error-mobile;
+    margin-bottom: $margin-error-mobile;
+    margin-top: $margin-error-mobile;
   }
 }
 
@@ -30,6 +33,7 @@ $font-weight: bold;
 
   @media (max-width: 576px) {
     font-size: $font-size-text-mobile;
+    margin-bottom: $margin-error-mobile;
   }
 }
 
