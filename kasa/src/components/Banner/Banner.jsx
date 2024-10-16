@@ -19,8 +19,8 @@ function Banner({ children }) {
       <img
         className={styles.img}
         src={bannerImage}
-        alt="Bannière - Paysage"
-        title="Bannière - Paysage "
+        alt="Bannière"
+        title="Bannière"
       />
       {children}
     </section>
