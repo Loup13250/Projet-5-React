@@ -17,7 +17,8 @@ function Carousel({ pictures, title }) {
   return pictures.length === 1 ? (
     <div className={styles.carousel}>
       <img
-        className={`${styles.slide} ${styles[`animation${count % 2}`]}`}
+        //${styles[`animation${count % 2}`]}
+        className={`${styles.slide} `}
         src={pictures[count]}
         alt={title}
         title={title}

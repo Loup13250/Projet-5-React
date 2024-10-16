@@ -35,24 +35,26 @@ function Logements() {
       <span key={`${word}-${index}-${dataLogements.id}`}>{word}</span>
     ));
   // Transformation de la note en "étoiles"
-  const stars = dataLogements && [1, 2, 3, 4, 5];
+  // const stars = dataLogements && [1, 2, 3, 4, 5];
+  const stars = [1, 2, 3, 4, 5];
+  const isActive = (star) =>
+    Math.round(dataLogements.rating) < star ? styles.starNocolor : "";
   const rating = () =>
-    dataLogements &&
-    stars.map((star) =>
-      Math.round(dataLogements.rating) >= star ? (
-        <i
-          key={`${star}-${dataLogements.id}`}
-          className={styles.star + " fa-solid fa-star"}
-        ></i>
-      ) : (
-        <i
-          key={`${star}-${dataLogements.id}`}
-          className={
-            styles.star + " " + styles.starNocolor + " fa-solid fa-star"
-          }
-        ></i>
-      )
-    );
+    // dataLogements &&
+    stars.map((star) => (
+      // Math.round(dataLogements.rating) >= star ? (
+      <i
+        key={`${star}-${dataLogements.id}`}
+        className={styles.star + " fa-solid fa-star " + isActive(star)}
+      ></i>
+      // ) : (
+      //   <i
+      //     key={`${star}-${dataLogements.id}`}
+      //     className={
+      //       styles.star + " " + styles.starNocolor + " fa-solid fa-star"
+      //     }
+      //   ></i>
+    ));
 
   return (
     dataLogements && (

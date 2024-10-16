@@ -5,7 +5,7 @@ $border-radius-mobile: 10px;
 $padding-desktop: 50px;
 $padding-mobile: 30px;
 $font-size-desktop: 6em;
-$font-size-mobile: 3em;
+$font-size-mobile: 20px;
 $counter-bottom: 25px;
 
 .carousel {
@@ -22,37 +22,37 @@ $counter-bottom: 25px;
     object-position: center;
     border-radius: $border-radius-desktop;
 
-    &.animation0 {
-      animation: slideIn 200ms;
-    }
-    &.animation1 {
-      animation: slideOut 200ms;
-    }
+    // &.animation0 {
+    //   animation: slideIn 200ms;
+    // }
+    // &.animation1 {
+    //   animation: slideOut 200ms;
+    // }
   }
 
   // Animation du Slide
 
-  @keyframes slideIn {
-    0% {
-      transform: translateX(100%);
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
+  // @keyframes slideIn {
+  //   0% {
+  //     transform: translateX(100%);
+  //     opacity: 0.5;
+  //   }
+  //   100% {
+  //     transform: translateX(0);
+  //     opacity: 1;
+  //   }
+  // }
 
-  @keyframes slideOut {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(-100%);
-      opacity: 0.5;
-    }
-  }
+  // @keyframes slideOut {
+  //   0% {
+  //     transform: translateX(0);
+  //     opacity: 1;
+  //   }
+  //   100% {
+  //     transform: translateX(-100%);
+  //     opacity: 0.5;
+  //   }
+  // }
 
   .counter {
     position: absolute;
@@ -68,6 +68,8 @@ $counter-bottom: 25px;
     cursor: pointer;
     padding: $padding-desktop;
     font-size: $font-size-desktop;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .button {
