@@ -17,11 +17,12 @@ function Carousel({ pictures, title }) {
   return pictures.length === 1 ? (
     <div className={styles.carousel}>
       <img
-        className={styles.slide}
+        className={`${styles.slide} ${styles[`animation${count % 2}`]}`}
         src={pictures[count]}
         alt={title}
         title={title}
       />
+
       <span className={styles.counter}>
         {count + 1}/{pictures.length}
       </span>
