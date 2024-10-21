@@ -10,6 +10,7 @@ function Gallery() {
       <section aria-label="Galerie des appartements" className={styles.gallery}>
         {datas.map((data) => {
           return (
+            // affiche img et le titre (id)
             <Card
               key={data.id}
               id={data.id}

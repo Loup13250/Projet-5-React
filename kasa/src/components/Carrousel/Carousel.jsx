@@ -2,7 +2,8 @@ import styles from "./Carousel.module.scss";
 import { useState } from "react";
 
 function Carousel({ pictures, title }) {
-  const [count, setCount] = useState(0);
+  // Carousel pictures et title sont des pops ( permet au composant de savoir quoi utiliser)
+  const [count, setCount] = useState(0); // etat count pour suivre l'index de l'image actuel
 
   const previousSlide = () => {
     //Décremente count 0 => -1 pour passer a l'image précédente
@@ -14,7 +15,7 @@ function Carousel({ pictures, title }) {
     setCount(count === pictures.length - 1 ? 0 : count + 1);
   };
 
-  return pictures.length === 1 ? (
+  return pictures.length === 1 ? ( // si 1 image afficher 1 image sans les boutons de nav
     <div className={styles.carousel}>
       <img
         //${styles[`animation${count % 2}`]}

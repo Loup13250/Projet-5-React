@@ -3,6 +3,7 @@ import styles from "./About.module.scss";
 import Slide from "../../components/Slide/Slide";
 
 function About() {
+  // fonction qui récupere la banniere et les Slide et affiche du text dans les Slide
   return (
     <main role="main">
       <Banner />

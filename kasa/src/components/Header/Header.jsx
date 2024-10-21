@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo-header.png";
 
 function Header() {
   const location = useLocation();
-  // useLocation pour pouvoir souligner Accueil ou A Propos Selon la page ou je me trouve
+  // useLocation pour pouvoir souligner Accueil ou A Propos Selon la page(Location) ou je me trouve
   return (
     <header className={styles.header}>
       <Link to="/">
@@ -31,6 +31,7 @@ function Header() {
           </li>
           <li className={styles.li}>
             <Link
+              // Si page = À Propos (/about) alors souligner À Propos
               className={`${styles.a} ${
                 location.pathname === "/about" ? styles.active : ""
               }`}

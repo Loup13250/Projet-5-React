@@ -9,6 +9,7 @@ function Logements() {
   // Récupération de l'id dans les paramètres de l"URL
   const { id } = useParams();
   const navigate = useNavigate();
+
   // Vérification de l'existence de données et redirection si ce n'est pas le cas
   const dataLogements = datas.find((data) => data.id === id);
   useEffect(() => {
@@ -38,22 +39,13 @@ function Logements() {
   // const stars = dataLogements && [1, 2, 3, 4, 5];
   const stars = [1, 2, 3, 4, 5];
   const isActive = (star) =>
-    Math.round(dataLogements.rating) < star ? styles.starNocolor : "";
+    Math.round(dataLogements.rating) < star ? styles.starNocolor : ""; // Si la note est inferieur ou égal = coloré sinon no color
   const rating = () =>
-    // dataLogements &&
     stars.map((star) => (
-      // Math.round(dataLogements.rating) >= star ? (
       <i
         key={`${star}-${dataLogements.id}`}
         className={styles.star + " fa-solid fa-star " + isActive(star)}
       ></i>
-      // ) : (
-      //   <i
-      //     key={`${star}-${dataLogements.id}`}
-      //     className={
-      //       styles.star + " " + styles.starNocolor + " fa-solid fa-star"
-      //     }
-      //   ></i>
     ));
 
   return (

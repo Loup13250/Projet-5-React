@@ -2,6 +2,7 @@ import styles from "./Footer.module.scss";
 import logo from "../../assets/images/logo-footer.png";
 
 function Footer() {
+  // footer (no props )qui renvoi  logo et div du text copyright
   return (
     <footer className={styles.footer}>
       <img

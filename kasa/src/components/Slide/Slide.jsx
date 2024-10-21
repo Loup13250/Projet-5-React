@@ -2,9 +2,9 @@ import styles from "./Slide.module.scss";
 import { useState } from "react"; // hooks
 
 function Slide({ titleSlide, textSlide }) {
-  // titleSlide et textSlide sont des props.
-  const [isOpen, setIsOpen] = useState(false);
-  const [animation, setAnimation] = useState(0);
+  // titleSlide et textSlide sont des props du composant Slide.
+  const [isOpen, setIsOpen] = useState(false); // déclare ouvert fermé
+  const [animation, setAnimation] = useState(0); // l'animation
 
   function open() {
     setIsOpen(true);
@@ -44,26 +44,4 @@ function Slide({ titleSlide, textSlide }) {
 
 export default Slide;
 
-// Importations : Il importe des styles et des outils de React.
-
-// Création d'un Composant : Il crée un composant appelé Slide qui prend deux paramètres (titleSlide et textSlide).
-
-// État du Composant :
-
-// isOpen : Gère si le slide est ouvert ou fermé.
-
-// animation : Gère l'état d'animation.
-
-// Fonctions d'Ouverture et Fermeture :
-
-// open : Ouvre le slide et déclenche l'animation d'ouverture.
-
-// close : Lance l'animation de fermeture et ferme le slide après 500ms.
-
-// Affichage du Composant :
-
-// Si le slide est ouvert, il montre un bouton et le texte (textSlide).
-
-// Si le slide est fermé, il montre juste un bouton.
-
-// En gros, ce fichier gère une section "slider" qui peut s'ouvrir et se fermer avec des animations
+// pour l'animation voir .slide animation et les @keyframes dans le .scss
