@@ -28,7 +28,7 @@ function Carousel({ pictures, title }) {
       <span className={styles.counter}>
         {count + 1}/{pictures.length}
       </span>
-    </div>
+    </div> //span className a supprimer pour enlever me 1/1
   ) : (
     <div className={styles.carousel}>
       <button

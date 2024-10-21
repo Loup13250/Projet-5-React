@@ -8,8 +8,9 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  // Routage de mes pages
   return (
-    <HashRouter /* Hash pour gitpage */>
+    <HashRouter /* Hash pour gitpage sinon BrowserRouter*/>
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
