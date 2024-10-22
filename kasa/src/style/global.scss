@@ -9,6 +9,9 @@ $font-weight-body: 400;
   font-family: $font-family;
 }
 
+.divbanner {
+  display: none;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -19,6 +22,10 @@ main {
   flex: 1;
   @media (max-width: 576px) {
     padding: $main-padding-mobile;
+
+    .divbanner {
+      display: block;
+    }
   }
 }
 
