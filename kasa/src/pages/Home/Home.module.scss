@@ -12,6 +12,10 @@ $margin-left: 20px;
 $line-height-mobile: 100%;
 $padding-right: 20px;
 
+.divbanner {
+  display: none;
+}
+
 .div {
   color: $color;
   font-size: $font-size-desktop;
@@ -30,5 +34,8 @@ $padding-right: 20px;
     line-height: $line-height-mobile;
     width: $width;
     padding-right: $padding-right;
+    .divbanner {
+      display: block;
+    }
   }
 }
